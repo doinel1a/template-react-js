@@ -30,7 +30,7 @@ const Header = () => {
                     iconCss={`${
                         isDarkMode ? 'text-amber-200' : 'text-amber-500'
                     }`}
-                    onClick={() => setIsDarkMode(!isDarkMode)}
+                    onClick={() => setIsDarkMode((prevState) => !prevState)}
                 />
             </div>
         </header>
