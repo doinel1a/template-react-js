@@ -42,47 +42,44 @@ const Home = () => {
                 </div>
                 <div className='flex justify-center'>
                     <Form
-                        children={
-                            <>
-                                <Input
-                                    id='name'
-                                    type='text'
-                                    label='Name'
-                                    labelCss={
-                                        activeInput === 'name'
-                                            ? '!text-blue-600'
-                                            : ''
-                                    }
-                                    onFocus={() => setActiveInput('name')}
-                                    onBlur={() => setActiveInput('')}
-                                />
-                                <Input
-                                    id='surname'
-                                    type='text'
-                                    label='Surname'
-                                    labelCss={
-                                        activeInput === 'surname'
-                                            ? '!text-blue-600'
-                                            : ''
-                                    }
-                                    onFocus={() => setActiveInput('surname')}
-                                    onBlur={() => setActiveInput('')}
-                                />
-                                <Input
-                                    id='email'
-                                    type='text'
-                                    label='E-mail'
-                                    labelCss={
-                                        activeInput === 'email'
-                                            ? '!text-blue-600'
-                                            : ''
-                                    }
-                                    onFocus={() => setActiveInput('email')}
-                                    onBlur={() => setActiveInput('')}
-                                />
-                            </>
-                        }
-                    />
+                        onSubmit={(e) => {
+                            e.preventDefault();
+                            alert('a');
+                        }}
+                    >
+                        <Input
+                            id='name'
+                            type='text'
+                            label='Name'
+                            labelCss={
+                                activeInput === 'name' ? '!text-blue-600' : ''
+                            }
+                            onFocus={() => setActiveInput('name')}
+                            onBlur={() => setActiveInput('')}
+                        />
+                        <Input
+                            id='surname'
+                            type='text'
+                            label='Surname'
+                            labelCss={
+                                activeInput === 'surname'
+                                    ? '!text-blue-600'
+                                    : ''
+                            }
+                            onFocus={() => setActiveInput('surname')}
+                            onBlur={() => setActiveInput('')}
+                        />
+                        <Input
+                            id='email'
+                            type='text'
+                            label='E-mail'
+                            labelCss={
+                                activeInput === 'email' ? '!text-blue-600' : ''
+                            }
+                            onFocus={() => setActiveInput('email')}
+                            onBlur={() => setActiveInput('')}
+                        />
+                    </Form>
                 </div>
             </div>
         </section>
