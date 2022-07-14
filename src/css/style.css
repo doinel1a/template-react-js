@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --header-height: 3.5rem;
+    --footer-height: 2.5rem;
+}
+
+/* HEADER HEIGHT */
+.header-h {
+    height: var(--header-height);
+}
+
+/* MAIN CONTENT HEIGHT */
+.main-h {
+    height: calc(100% - (var(--header-height) + var(--footer-height)));
+}
+
+/* FOOTER HEIGHT */
+.footer-h {
+    height: var(--footer-height);
+}
+
+.sm-grid {
+    grid-template-rows: 1.2rem 1fr 1.2rem;
+    grid-template-columns: 4.5rem 2fr 1fr 1.5rem;
+}
+
+.logo {
+    letter-spacing: 4px;
+    text-shadow: red 0 0, cyan 0 0;
+    transition: text-shadow 200ms;
+}
+
+.logo:hover {
+    text-shadow: -4px 0 red, cyan 4px 0;
+}
